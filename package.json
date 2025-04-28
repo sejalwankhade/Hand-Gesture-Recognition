@@ -2,11 +2,15 @@
   "name": "my-gesture-app",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@tensorflow-models/handpose": "^0.1.0",
+    "@tensorflow/tfjs": "^4.22.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "cross-env": "^7.0.3",
     "fingerpose": "^0.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -15,11 +19,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
+  "start": "react-scripts --openssl-legacy-provider start",
+  "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "eslintConfig": {
     "extends": [
       "react-app",
